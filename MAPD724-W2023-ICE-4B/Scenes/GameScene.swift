@@ -1,3 +1,11 @@
+//GameScene
+//  Author's name : Sarthak Vashistha
+//  StudentID : 301296257
+//
+//
+// Created by Sarthak on 5/03/23.
+// Version: 1.0
+//
 import SpriteKit
 import GameplayKit
 import AVFoundation
@@ -69,7 +77,7 @@ class GameScene: SKScene
         }
     }
     
-    func touchDown(atPoint pos : CGPoint)
+    func touchDown(atPoint pos : CGPoint){
     if UIDevice.current.orientation.isPortrait {
             player?.TouchMove(newPos: CGPoint(x: pos.x, y: pos.y))
         }

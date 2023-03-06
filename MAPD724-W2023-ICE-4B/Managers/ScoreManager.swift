@@ -1,3 +1,12 @@
+//ScoreManager
+//Author's name : Sarthak Vashistha
+//  StudentID : 301296257
+//
+//
+// Created by Sarthak on 5/03/23.
+// Version: 1.0
+//
+
 import SpriteKit
 import UIKit
 

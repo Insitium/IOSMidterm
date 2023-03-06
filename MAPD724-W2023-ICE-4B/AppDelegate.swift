@@ -2,7 +2,13 @@
 //  AppDelegate.swift
 //  MAPD724-W2023-ICE-4B
 //
-//  Created by Tom Tsiliopoulos on 2023-02-08.
+//  //  Author's name : Sarthak Vashistha
+//  StudentID : 301296257
+//
+//
+// Created by Sarthak on 5/03/23.
+// Version: 1.0
+//
 //
 
 import UIKit
