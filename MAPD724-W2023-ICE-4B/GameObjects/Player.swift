@@ -6,7 +6,11 @@ class Player : GameObject
     // Initializer
     init()
     {
-        super.init(imageString: "plane", initialScale: 2.0)
+        if (UIDevice.current.orientation.isLandscape){
+            super.init(imageString: "planeLandscape", initialScale: 1.0)
+        }else{
+            super.init(imageString: "planeLandscape", initialScale: 2.0)
+        }
         Start()
     }
     
@@ -43,12 +47,19 @@ class Player : GameObject
     
     override func Reset()
     {
-        position.y = -640
+        if UIDevice.current.orientation.isLandscape {
+            position.y = UIScreen.main.bounds.height / 5
+        } else {
+            position.y = UIScreen.main.bounds.height / 3
+
+        }
     }
     
     func TouchMove(newPos: CGPoint)
     {
-        position = newPos
+        if abs(newPos.y) <= 140 {
+            position = newPos
+        }
     }
     
 }

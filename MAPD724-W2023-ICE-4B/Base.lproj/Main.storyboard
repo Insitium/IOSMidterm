@@ -110,7 +110,7 @@ Mail Pilot</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-773.02325581395348" y="-32.832618025751074"/>
+            <point key="canvasLocation" x="-949" y="-5"/>
         </scene>
     </scenes>
     <resources>

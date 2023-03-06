@@ -6,7 +6,11 @@ class Cloud : GameObject
     // initializer / constructor
     init()
     {
-        super.init(imageString: "cloud", initialScale: 1.0)
+        if UIDevice.current.orientation.isLandscape {
+            super.init(imageString: "cloud", initialScale: 0.6)
+        } else{
+            super.init(imageString: "cloud", initialScale: 1.0)
+        }
         Start()
     }
     
@@ -31,7 +35,7 @@ class Cloud : GameObject
     
     override func CheckBounds()
     {
-        if(position.y <= -902)
+        if(position.x <= -902)
         {
             Reset()
         }
@@ -46,12 +50,12 @@ class Cloud : GameObject
         horizontalSpeed = CGFloat((randomSource?.nextUniform())! * 4.0) - 2.0 
         
         // get a pseudo random number for the X position: -262 to 262
-        let randomX:Int = (randomSource?.nextInt(upperBound: 524))! - 262
+        let randomX:Int = (randomSource?.nextInt(upperBound: 180))! - 100
         position.x = CGFloat(randomX)
         
         // get a pseudo random number for the Y position: 902 to 932
         let randomY:Int = (randomSource?.nextInt(upperBound: 30))! + 902
-        position.y = CGFloat(randomY)
+        position.x = CGFloat(randomY)
         
         isColliding = false
     }
@@ -59,7 +63,7 @@ class Cloud : GameObject
     // public method
     func Move()
     {
-        position.x -= horizontalSpeed!
-        position.y -= verticalSpeed!
+        position.y -= horizontalSpeed!
+        position.x -= verticalSpeed!
     }
 }
